@@ -1,3 +1,5 @@
+// services/posts.ts
+
 import { faker } from "@faker-js/faker";
 
 import { IFetchPosts } from "@/types";

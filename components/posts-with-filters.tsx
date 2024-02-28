@@ -2,11 +2,11 @@
 
 "use client";
 
-import { Dispatch, SetStateAction } from "react";
+import { FC } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
-import { IFetchPosts, scriptListT, sortKeyT } from "@/types";
+import { IPostsWithFilters, scriptListT } from "@/types";
 
 const Timer = dynamic(() => import("./timer"), { ssr: false });
 
@@ -37,7 +37,7 @@ const scriptList: scriptListT = [
   },
 ];
 
-export const PostsWithFilters = ({
+export const PostsWithFilters: FC<IPostsWithFilters> = ({
   index,
   loading,
   setIndex,
@@ -45,14 +45,6 @@ export const PostsWithFilters = ({
   posts,
   initialLoading,
   showUIStuck = true,
-}: {
-  index: number | null;
-  loading: boolean;
-  setIndex: Dispatch<SetStateAction<number | null>>;
-  setSortKey: Dispatch<SetStateAction<sortKeyT>>;
-  posts: Array<IFetchPosts>;
-  initialLoading: boolean;
-  showUIStuck?: boolean;
 }) => {
   return (
     <div className="flex flex-col gap-10">

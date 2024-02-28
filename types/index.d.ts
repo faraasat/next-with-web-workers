@@ -1,3 +1,7 @@
+// types/index.d.ts
+
+import { Dispatch, SetStateAction } from "react";
+
 export type actionT = "date" | "title" | "author";
 
 export type sortKeyT =
@@ -21,4 +25,14 @@ export interface IFetchPosts {
   date: Date;
   commentCount: number;
   avatar: string;
+}
+
+export interface IPostsWithFilters {
+  index: number | null;
+  loading: boolean;
+  setIndex: Dispatch<SetStateAction<number | null>>;
+  setSortKey: Dispatch<SetStateAction<sortKeyT>>;
+  posts: Array<IFetchPosts>;
+  initialLoading: boolean;
+  showUIStuck?: boolean;
 }

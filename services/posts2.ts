@@ -1,3 +1,5 @@
+// services/posts.ts
+
 import { faker } from "@faker-js/faker";
 
 import { IFetchPosts } from "@/types";
@@ -22,6 +24,7 @@ const posts: Array<IFetchPosts> = [];
       });
     }
 
+    // posting a message to main thread when posts are generated
     self.postMessage(posts);
   }
 })();
