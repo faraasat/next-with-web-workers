@@ -100,7 +100,6 @@ export const PostsWithFilters: FC<IPostsWithFilters> = ({
                           fill
                           draggable={false}
                           className="rounded-lg"
-                          sizes="130px"
                         />
                       </div>
                       <div className="flex flex-col w-full items-start justify-center h-full">
@@ -122,7 +121,6 @@ export const PostsWithFilters: FC<IPostsWithFilters> = ({
                           fill
                           draggable={false}
                           className="rounded-full"
-                          sizes="60px"
                         />
                       </div>
                       <div className="flex flex-col">
